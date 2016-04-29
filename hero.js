@@ -1,6 +1,10 @@
 Core.add(function(){
 
 	function createHero(species, gender){
+		return new Hero(species, gender);
+	}
+
+	function Hero(species, gender){
 
 		var species = species || randomKey(profiles);
 		var attributes = profiles[species].attributes;
@@ -373,6 +377,7 @@ Core.add(function(){
 
 
 	return {
+		id: 'hero',
 		create: createHero
 	}
 
